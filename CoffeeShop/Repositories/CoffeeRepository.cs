@@ -28,7 +28,7 @@ namespace CoffeeShop.Repositories
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT Id, Title, BeanVarietyId;";
+                    cmd.CommandText = "SELECT Id, Title, BeanVarietyId FROM Coffee;";
                     var reader = cmd.ExecuteReader();
                     var coffeeList = new List<Coffee>();
                     while (reader.Read())
